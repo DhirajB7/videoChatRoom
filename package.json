@@ -1,0 +1,22 @@
+{
+  "name": "video-chat",
+  "version": "1.0.0",
+  "description": "video chat , zoom clone",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev" : "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dhiraj",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "socket.io": "^4.0.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
