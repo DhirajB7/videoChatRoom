@@ -1,8 +1,15 @@
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
-const myPeer = new Peer(undefined, {
-  host: "/",
-  port: "4001",
+// const myPeer = new Peer(undefined, {
+//   host: "/",
+//   port: "4001",
+// });
+
+const myPeer = new Peer({
+  config: {'iceServers': [
+  //  { url: 'stun.l.google.com:19302' },
+    { url: 'turn:turn.bistri.com:80', username: 'homeo', credential: 'homeo'}
+  ]} /* Sample servers, please use appropriate ones */
 });
 
 const peers = {};

@@ -1,7 +1,7 @@
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
-import {v4} from 'uuid'
+//import {v4} from 'uuid'
 
 // server details
 const app = express();
@@ -21,7 +21,8 @@ app.use(express.static("public"));
 app.get("/check", (req, res) => res.json({ status: "working" }));
 
 app.get("/", (req,res) => {
-    res.redirect(`/${v4()}`)
+    //res.redirect(`/${v4()}`) //variable room name 
+    res.redirect(`/videoroom`) //fixed room name
 })
 
 
